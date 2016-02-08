@@ -1,4 +1,15 @@
 #---------------------------
+# if user is not admin, start powershell in admin mode in new window
+#---------------------------
+
+if(!([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator"))
+{
+  $arguments = "& '" + $myinvocation.mycommand.definition + "'"
+  Start-Process powershell -Verb runAs -ArgumentList $arguments
+  Break
+}
+
+#---------------------------
 # Chocolatey
 #---------------------------
 
