@@ -24,8 +24,6 @@ if (Get-Command choco -errorAction SilentlyContinue) { # check if choco exists
 }
 if(!$?) { exit 1 }
 
-Write-Progress -Activity "Component Installation" -PercentComplete 0
-
 #---------------------------
 # Refresh System Environment Variable for Terminal
 #---------------------------
@@ -46,22 +44,17 @@ Write-Host "Install Ruby, Nodejs, Git with chocolatey" -fore green
 Write-Host ''
 
 # Ruby
+
 choco install ruby -y
 if(!$?) { exit 1 }
-
-Write-Progress -Activity "Component Installation" -PercentComplete 10
 
 # NodeJS Version 4.2.6
 choco install nodejs.install -version 4.2.6 -y
 if(!$?) { exit 1 }
 
-Write-Progress -Activity "Component Installation" -PercentComplete 20
-
 # Git
 choco install git.install -y
 if(!$?) { exit 1 }
-
-Write-Progress -Activity "Component Installation" -PercentComplete 30
 
 #---------------------------
 # Refresh Environment Variables for Terminal
@@ -85,8 +78,6 @@ Write-Host ''
 gem update --system
 if(!$?) { exit 1 }
 
-Write-Progress -Activity "Component Installation" -PercentComplete 40
-
 Write-Host ''
 Write-Host "Install Compass and Bundler." -fore green
 Write-Host ''
@@ -95,13 +86,9 @@ Write-Host ''
 gem install compass
 if(!$?) { exit 1 }
 
-Write-Progress -Activity "Component Installation" -PercentComplete 50
-
 # Bundler.io
 gem install bundler
 if(!$?) { exit 1 }
-
-Write-Progress -Activity "Component Installation" -PercentComplete 60
 
 #---------------------------
 # NodeJS
@@ -115,8 +102,6 @@ Write-Host ''
 npm install -g npm
 if(!$?) { exit 1 }
 
-Write-Progress -Activity "Component Installation" -PercentComplete 70
-
 Write-Host ''
 Write-Host "Install Yeoman, Grunt and Bower." -fore green
 Write-Host ''
@@ -125,19 +110,13 @@ Write-Host ''
 npm install -g yo
 if(!$?) { exit 1 }
 
-Write-Progress -Activity "Component Installation" -PercentComplete 80
-
 # Grunt-Cli
 npm install -g grunt-cli
 if(!$?) { exit 1 }
 
-Write-Progress -Activity "Component Installation" -PercentComplete 90
-
 # Bower
 npm install -g bower
 if(!$?) { exit 1 }
-
-Write-Progress -Activity "Component Installation" -PercentComplete 100
 
 Write-Host ''
 Write-Host "Thank You! Now everything should be ready to start with new Projects." -fore green
