@@ -48,7 +48,7 @@ Write-Host ''
 choco install ruby -y
 if(!$?) { exit 1 }
 
-# NodeJS Version 4.4.4
+# NodeJS Version 4.4.3
 choco install nodejs.install -version 4.4.3 -y
 if(!$?) { exit 1 }
 
