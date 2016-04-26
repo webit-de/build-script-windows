@@ -48,8 +48,8 @@ Write-Host ''
 choco install ruby -y
 if(!$?) { exit 1 }
 
-# NodeJS Version 4.2.6
-choco install nodejs.install -version 4.2.6 -y
+# NodeJS Version 4.4.4
+choco install nodejs.install -version 4.4.3 -y
 if(!$?) { exit 1 }
 
 # Git
