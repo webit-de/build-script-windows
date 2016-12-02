@@ -50,6 +50,7 @@ if(!$?) { exit 1 }
 
 # NodeJS Version 6 lts
 choco install nodejs.install -version 6.9.1 -y
+
 if(!$?) { exit 1 }
 
 # Git
