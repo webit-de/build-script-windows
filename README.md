@@ -10,7 +10,7 @@ Use Windows-Powershell as Administrator and start build-script-windows.ps1.
 
 1. chocolatey
 2. ruby
-3. nodejs Version 4.2.6 lts
+3. nodejs Version 6 lts
 4. git
 5. compass
 6. bundler
