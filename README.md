@@ -18,7 +18,7 @@ Use Windows-Powershell as Administrator and use the following commands:
 
 1. chocolatey
 2. ruby
-3. nodejs Version 6 lts
+3. nodejs lts
 4. git
 5. compass
 6. bundler
