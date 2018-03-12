@@ -44,13 +44,12 @@ Write-Host "Install Ruby, Nodejs, Git with chocolatey" -fore green
 Write-Host ''
 
 # Ruby
-
 choco install ruby -y
 if(!$?) { exit 1 }
 
-# NodeJS Version 6 lts
-choco install nodejs.install -version 6.9.1 -y
-
+# TODO: Is it ok to install the latest version or should we still specify a specific version?
+# Install latest NodeJS LTS Version
+choco install nodejs-lts.install -y
 if(!$?) { exit 1 }
 
 # Git

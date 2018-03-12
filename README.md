@@ -4,8 +4,15 @@ Install necessary Frontend-Components using only one script.
 
 ## Usage
 
-Use Windows-Powershell as Administrator and use the command 'Set-ExecutionPolicy Unrestricted'.
-Now you can use build-script-windows.ps1 at your powershell.
+Use Windows-Powershell as Administrator and use the following commands:
+
+```powershell
+# Change the user preference to 'Unrestricted'.
+> Set-ExecutionPolicy -ExecutionPolicy Unrestricted
+
+# Execute script
+> .\build-script-windows.ps1
+```
 
 ## Components
 
